@@ -1,0 +1,580 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@200;300;400;500;600&display=swap');
+
+* {
+  scroll-behavior: smooth;
+  margin         : 0;
+  padding        : 0;
+}
+
+
+:root {
+  --bgColor  : #FFFBF6;
+  --textColor: #0f0f0f;
+  --red      : #C2331A;
+  --gray     : #EDEDED;
+}
+
+body {
+  background-color: var(--bgColor);
+  box-sizing      : border-box;
+  font-family     : 'Raleway', sans-serif;
+  font-display    : swap;
+  font-size       : 16px;
+  overflow-x      : hidden;
+}
+
+
+h1 {
+  margin        : 0;
+  margin-bottom : 20px;
+  font-family   : 'Bebas Neue', cursive;
+  letter-spacing: 3px;
+  color         : var(--red);
+  text-align    : center;
+}
+
+h2 {
+
+  font-family  : 'Bebas Neue', cursive;
+  font-size    : 20px;
+  margin-bottom: 20px;
+  margin-top   : 20px;
+}
+
+p {
+  margin       : 0;
+  margin-bottom: 25px;
+  color        : var(--textColor);
+}
+
+.justify {
+  text-align: justify;
+}
+
+section {
+  padding-top: 70px;
+}
+
+.container {
+  width    : 70%;
+  max-width: 850px;
+  margin   : 0 auto;
+}
+
+.flex-container {
+  width          : 100%;
+  display        : flex;
+  flex-wrap      : wrap;
+  justify-content: space-between;
+}
+
+
+nav {
+  width           : 100%;
+  height          : 60px;
+  position        : fixed;
+  z-index         : 100;
+  background-color: var(--gray);
+  transition      : all 0.1s;
+  box-shadow      : 0px 0px 2px rgba(0, 0, 0, 0.5);
+  overflow        : hidden;
+
+}
+
+.navbar {
+  display        : flex;
+  justify-content: space-between;
+  height         : 60px;
+  align-items    : center;
+}
+
+footer {
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* LOGOTIPO */
+.navbar .logo a {
+  color          : var(--textColor);
+  font-family    : 'Bebas Neue', cursive;
+  text-decoration: none;
+  font-size      : 25px;
+  line-height    : 60px;
+}
+
+.enlaces-header a {
+  font-weight    : 500;
+  color          : var(--textColor);
+  text-decoration: none;
+  padding-left   : 20px;
+  transition     : color 0.15s ease-in;
+}
+
+footer a:hover,
+.enlaces-header a:hover {
+  color: var(--red);
+}
+
+
+/* MENU HAMBURGUESA */
+.hamburguer {
+  color     : white;
+  display   : none;
+  width     : 70px;
+  height    : 70px;
+  text-align: center;
+  z-index   : 100;
+  cursor    : pointer;
+  transition: color 0.2s ease-in;
+}
+
+.hamburguer>i {
+  font-size  : 25px;
+  line-height: 80px;
+}
+
+/* HERO */
+.hero {
+  position       : absolute;
+  z-index        : 2;
+  display        : flex;
+  flex-direction : column;
+  flex-wrap      : wrap;
+  align-items    : center;
+  justify-content: center;
+  right          : 0;
+  left           : 0;
+  width          : 100%;
+  height         : 60vh;
+}
+
+.hero__title {
+  font-size: 60px;
+  color    : black;
+  margin   : 0;
+}
+
+.hero__text {
+  font-size: 25px;
+  margin   : 0;
+  color    : var(--red);
+}
+
+.hero__cta {
+  color          : var(--red);
+  text-decoration: none;
+  font-weight    : bold;
+  padding        : 10px 20px;
+  border         : 1px solid var(--red);
+  border-radius  : 5px;
+  margin-top     : 15px;
+  transition     : color 0.2s ease-in;
+}
+
+.hero__cta:hover {
+  background-color: var(--red);
+  color           : white;
+}
+
+/* About me */
+#about-me {
+  position        : relative;
+  z-index         : 10;
+  background-color: var(--bgColor);
+}
+
+.text-container {
+  width: 50%;
+}
+
+.text-container a {
+  font-weight    : bold;
+  text-decoration: none;
+  color          : black;
+}
+
+.img-profile {
+  width           : 300px;
+  height          : 300px;
+  object-fit      : cover;
+  background-color: aqua;
+}
+
+/* Skills */
+
+.img {
+  width        : 80px;
+  height       : 80px;
+  margin-right : 20px;
+  margin-bottom: 20px;
+  object-fit   : contain;
+}
+
+.tooltip {
+  position: relative;
+  width   : 80px;
+  margin  : 0 10px 0;
+}
+
+.tooltip:hover .tooltip-box {
+  display: inline-block;
+
+}
+
+.tooltip-box {
+  font-size       : 14px;
+  display         : none;
+  position        : absolute;
+  background-color: black;
+  line-height     : 14px;
+  z-index         : 500;
+  text-align      : center;
+  color           : white;
+  padding         : 5px 10px;
+  border-radius   : 5px;
+  left            : 0;
+  right           : 0;
+  bottom          : -11px;
+  transition      : all 0.3s;
+}
+
+.tooltip-box::before {
+  content      : "";
+  display      : block;
+  border-bottom: 7px solid black;
+  border-left  : 7px solid transparent;
+  border-right : 7px solid transparent;
+  position     : absolute;
+  top          : -7px;
+  left         : calc(50% - 7px);
+}
+
+/* Portfolio */
+
+.card {
+  width        : 100%;
+  padding      : 20px;
+  margin-bottom: 20px;
+  box-shadow   : 0px 0px 2px rgba(0, 0, 0, 0.4);
+
+}
+
+.card__text {
+  margin-bottom: 16px;
+}
+
+.img__container {
+  width : 24%;
+  height: 100px;
+}
+
+.img__thumb {
+  width     : 100%;
+  height    : 100%;
+  object-fit: cover;
+}
+
+/* CONTACT */
+#email {
+  width     : 400px;
+  height    : 100px;
+  object-fit: contain;
+}
+
+#contact a {
+  display: block;
+  margin : 0;
+
+}
+
+.contact {
+  width : 80px;
+  height: 80px;
+}
+
+.gray {
+  filter    : grayscale(100%) contrast(20%);
+  transition: all 0.3s;
+}
+
+.gray:hover {
+  filter: grayscale(100%) contrast(40%);
+}
+
+#ld:hover {
+  filter: grayscale(100%) contrast(80%);
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--gray);
+  text-align      : center;
+  padding         : 20px 0 20px;
+  margin-top      : 10px;
+}
+
+footer a {
+  text-decoration: none;
+  font-weight    : 500;
+  margin         : 0px 20px 0px;
+  transition     : color 0.15s ease-in;
+  color          : var(--textColor);
+}
+
+
+/* ANIMATION */
+
+.area {
+  background-color: var(--gray);
+  width           : 100%;
+  height          : 60vh;
+}
+
+.squares {
+  position    : absolute;
+  width       : 70%;
+  max-width   : 850px;
+  height      : 100%;
+  margin-left : auto;
+  margin-right: auto;
+  left        : 0;
+  right       : 0;
+}
+
+.squares li {
+  position  : absolute;
+  display   : block;
+  list-style: none;
+  width     : 20px;
+  height    : 20px;
+  background: rgba(124, 35, 0, 0.2);
+  animation : animate 25s linear infinite;
+  bottom    : 200px;
+}
+
+.squares li:nth-child(1) {
+  left           : 25%;
+  width          : 80px;
+  height         : 80px;
+  animation-delay: 0s;
+}
+
+.squares li:nth-child(2) {
+  left              : 10%;
+  width             : 20px;
+  height            : 20px;
+  animation-delay   : 2s;
+  animation-duration: 12s;
+}
+
+.squares li:nth-child(3) {
+  left           : 70%;
+  width          : 20px;
+  height         : 20px;
+  animation-delay: 4s;
+}
+
+.squares li:nth-child(4) {
+  left              : 40%;
+  width             : 60px;
+  height            : 60px;
+  animation-delay   : 0s;
+  animation-duration: 18s;
+}
+
+.squares li:nth-child(5) {
+  left           : 65%;
+  width          : 20px;
+  height         : 20px;
+  animation-delay: 0s;
+}
+
+.squares li:nth-child(6) {
+  left           : 75%;
+  width          : 110px;
+  height         : 110px;
+  animation-delay: 3s;
+}
+
+.squares li:nth-child(7) {
+  left           : 35%;
+  width          : 150px;
+  height         : 150px;
+  animation-delay: 7s;
+}
+
+.squares li:nth-child(8) {
+  left              : 50%;
+  width             : 25px;
+  height            : 25px;
+  animation-delay   : 15s;
+  animation-duration: 45s;
+}
+
+.squares li:nth-child(9) {
+  left              : 20%;
+  width             : 15px;
+  height            : 15px;
+  animation-delay   : 2s;
+  animation-duration: 35s;
+}
+
+.squares li:nth-child(10) {
+  left              : 85%;
+  width             : 150px;
+  height            : 150px;
+  animation-delay   : 0s;
+  animation-duration: 11s;
+}
+
+@keyframes animate {
+
+  0% {
+    transform    : translateY(0) rotate(0deg);
+    opacity      : 1;
+    border-radius: 0;
+  }
+
+  100% {
+    transform    : translateY(-1000px) rotate(720deg);
+    opacity      : 0;
+    border-radius: 50%;
+  }
+
+
+}
+
+@media screen and (max-width:856px) {
+  .hero__title {
+    font-size     : 30px;
+    letter-spacing: 0;
+  }
+
+  .justify {
+    text-align : center;
+    align-items: center;
+  }
+
+  /* HERO */
+  .hero__title {
+    font-size: 40px;
+  }
+
+  .hero__text {
+    font-size: 20px;
+  }
+
+  .squares li:nth-child(7),
+  .squares li:nth-child(10),
+  .squares li:nth-child(6) {
+    width : 40px;
+    height: 40px;
+  }
+
+  #about-me .flex-container {
+    flex-direction: column-reverse;
+  }
+
+  .text-container {
+    width     : 100%;
+    text-align: center;
+  }
+
+  .img-profile {
+    margin       : 0 auto;
+    margin-bottom: 20px;
+  }
+
+  #email {
+    width     : 250px;
+    object-fit: contain;
+  }
+
+  .enlaces-header {
+    z-index         : 200;
+    position        : fixed;
+    background-color: var(--gray);
+    top             : 0;
+    left            : -100%;
+    height          : 100vh;
+    max-width       : 50%;
+    width           : 250px;
+    transition      : ease-in-out 0.3s;
+    box-shadow      : 0px 0px 2px rgba(0, 0, 0, 0.5);
+  }
+
+  .enlaces-header.active {
+    left: 0%;
+  }
+
+  .enlaces-header a {
+    margin   : 80px 0 80px;
+    display  : block;
+    font-size: 20px;
+  }
+
+  .hamburguer {
+    display: block;
+    color  : var(--textColor);
+  }
+
+  .hamburguer:hover {
+    color: var(--red);
+  }
+
+}
+
+@media screen and (max-width:643px) {
+  .hero__title {
+    font-size: 30px;
+  }
+
+  .hero__text {
+    font-size: 16px;
+  }
+
+  .img__container {
+    margin-bottom: 20px;
+    width        : 48%;
+  }
+
+  #contact .flex-container {
+    flex-direction: column-reverse;
+    align-items   : center;
+  }
+
+
+}
+
+@media screen and (max-width:450px) {
+
+  p {
+    font-size: 15px;
+  }
+
+  .squares li {
+    bottom: 0px;
+  }
+
+  .img-profile {
+    width : 100%;
+    height: 250px;
+  }
+
+  .img__container {
+    width: 100%;
+  }
+
+  #email {
+    width: 100%;
+  }
+
+  footer {
+    display       : flex;
+    flex-direction: column;
+  }
+
+  footer a {
+    margin: 10px 0 10px;
+  }
+
+}
