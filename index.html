@@ -8,6 +8,7 @@
   <title>Portafolio</title>
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/lightbox.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="icon" type="image/vnd.microsoft.icon" href="./assets/icon.ico">
 </head>
@@ -33,9 +34,9 @@
   </header>
 
   <div class="hero" id="home">
-    <h1 class="hero__title">Jorge Calderón Peralta</h1>
-    <p class="hero__text">Ingeniero en Informática</p>
-    <a href="#contact" class="hero__cta">Contáctame</a>
+    <h1 class="hero__title" data-aos="fade-right" data-aos-duration="600">Jorge Calderón Peralta</h1>
+    <p class="hero__text" data-aos="fade-left" data-aos-duration="900">Ingeniero en Informática</p>
+    <a href="#contact" class="hero__cta" data-aos="flip-left" data-aos-duration="900">Contáctame</a>
   </div>
 
   <div class="area">
@@ -77,64 +78,73 @@
       personas muy capaces
       y responsables, donde he tenido el rol de desarrollador backend y otras veces el rol del lado frontend. Por lo
       cual me ha brindado tener experiencia con las siguientes tecnologías principalmente.</p>
-    <h2>Lenguajes</h2>
-    <div class="flex-container">
-      <div class="tooltip">
-        <img loading="lazy" class="img" src="./assets/logos/javascript.svg" alt="Javascript"><span
-          class="tooltip-box">ES9</span>
+    <article data-aos="fade-right">
+      <h2>Lenguajes</h2>
+      <div class="flex-container">
+        <div class="tooltip">
+          <img loading="lazy" class="img" src="./assets/logos/javascript.svg" alt="Javascript"><span
+            class="tooltip-box">ES9</span>
+        </div>
+        <div class="tooltip">
+          <img loading="lazy" class="img" src="./assets/logos/php.svg" alt="PHP"><span class="tooltip-box">PHP</span>
+        </div>
+        <div class="tooltip">
+          <img loading="lazy" class="img" src="./assets/logos/mysql.svg" alt="MySQL"><span
+            class="tooltip-box">MySQL</span>
+        </div>
+        <div class="tooltip">
+          <img loading="lazy" class="img" src="./assets/logos/html-5.svg" alt="HTML5"><span
+            class="tooltip-box">HTML5</span>
+        </div>
+        <div class="tooltip">
+          <img loading="lazy" class="img" src="./assets/logos/css-3.svg" alt="CSS3"><span
+            class="tooltip-box">CSS3</span>
+        </div>
       </div>
-      <div class="tooltip">
-        <img loading="lazy" class="img" src="./assets/logos/php.svg" alt="PHP"><span class="tooltip-box">PHP</span>
+    </article>
+    <article data-aos="fade-left">
+      <h2>Frameworks</h2>
+      <div class="flex-container">
+        <div class="tooltip">
+          <img loading="lazy" class="img" src="./assets/logos/bootstrap.svg" alt="Bootstrap"><span
+            class="tooltip-box">Bootstrap</span>
+        </div>
+        <div class="tooltip">
+          <img loading="lazy" class="img" src="./assets/logos/tailwindcss-icon.svg" alt="Tailwind"><span
+            class="tooltip-box">Tailwind</span>
+        </div>
+        <div class="tooltip">
+          <img loading="lazy" class="img" src="./assets/logos/jquery.svg" alt="Jquery"><span
+            class="tooltip-box">jQquery</span>
+        </div>
+        <div class="tooltip">
+          <img loading="lazy" class="img" src="./assets/logos/react.svg" alt="React"><span
+            class="tooltip-box">React</span>
+        </div>
       </div>
-      <div class="tooltip">
-        <img loading="lazy" class="img" src="./assets/logos/mysql.svg" alt="MySQL"><span
-          class="tooltip-box">MySQL</span>
+    </article>
+
+    <article data-aos="fade-right">
+      <h2>Otras herramientas</h2>
+      <div class="flex-container">
+        <div class="tooltip">
+          <img loading="lazy" class="img" src="./assets/logos/apache.svg" alt="Apache"><span
+            class="tooltip-box">Apache</span>
+        </div>
+        <div class="tooltip">
+          <img loading="lazy" class="img" src="./assets/logos/nodejs.svg" alt="NodeJS"><span
+            class="tooltip-box">NodeJS</span>
+        </div>
+        <div class="tooltip">
+          <img loading="lazy" class="img" src="./assets/logos/git-icon.svg" alt="Git"><span
+            class="tooltip-box">GIT</span>
+        </div>
+        <div class="tooltip">
+          <img loading="lazy" class="img" src="./assets/logos/leaflet.svg" alt="Leaflet"><span
+            class="tooltip-box">Leaflet</span>
+        </div>
       </div>
-      <div class="tooltip">
-        <img loading="lazy" class="img" src="./assets/logos/html-5.svg" alt="HTML5"><span
-          class="tooltip-box">HTML5</span>
-      </div>
-      <div class="tooltip">
-        <img loading="lazy" class="img" src="./assets/logos/css-3.svg" alt="CSS3"><span class="tooltip-box">CSS3</span>
-      </div>
-    </div>
-    <h2>Frameworks</h2>
-    <div class="flex-container">
-      <div class="tooltip">
-        <img loading="lazy" class="img" src="./assets/logos/bootstrap.svg" alt="Bootstrap"><span
-          class="tooltip-box">Bootstrap</span>
-      </div>
-      <div class="tooltip">
-        <img loading="lazy" class="img" src="./assets/logos/tailwindcss-icon.svg" alt="Tailwind"><span
-          class="tooltip-box">Tailwind</span>
-      </div>
-      <div class="tooltip">
-        <img loading="lazy" class="img" src="./assets/logos/jquery.svg" alt="Jquery"><span
-          class="tooltip-box">jQquery</span>
-      </div>
-      <div class="tooltip">
-        <img loading="lazy" class="img" src="./assets/logos/react.svg" alt="React"><span
-          class="tooltip-box">React</span>
-      </div>
-    </div>
-    <h2>Otras herramientas</h2>
-    <div class="flex-container">
-      <div class="tooltip">
-        <img loading="lazy" class="img" src="./assets/logos/apache.svg" alt="Apache"><span
-          class="tooltip-box">Apache</span>
-      </div>
-      <div class="tooltip">
-        <img loading="lazy" class="img" src="./assets/logos/nodejs.svg" alt="NodeJS"><span
-          class="tooltip-box">NodeJS</span>
-      </div>
-      <div class="tooltip">
-        <img loading="lazy" class="img" src="./assets/logos/git-icon.svg" alt="Git"><span class="tooltip-box">GIT</span>
-      </div>
-      <div class="tooltip">
-        <img loading="lazy" class="img" src="./assets/logos/leaflet.svg" alt="Leaflet"><span
-          class="tooltip-box">Leaflet</span>
-      </div>
-    </div>
+    </article>
   </section>
   <section id="portfolio" class="container">
     <h1>Portafolio</h1>
@@ -222,6 +232,7 @@
 
 
   <script src="./js/lightbox-plus-jquery.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="./js/app.js"></script>
 </body>
 
