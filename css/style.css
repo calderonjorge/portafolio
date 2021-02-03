@@ -10,7 +10,7 @@
 :root {
   --bgColor  : #FFFBF6;
   --textColor: #0f0f0f;
-  --red      : #C2331A;
+  --red      : #3c060c;
   --gray     : #EDEDED;
 }
 
@@ -66,6 +66,7 @@ section {
   display        : flex;
   flex-wrap      : wrap;
   justify-content: space-between;
+  align-items    : center;
 }
 
 
@@ -149,14 +150,14 @@ footer a:hover,
 
 .hero__title {
   font-size: 60px;
-  color    : black;
+  color    : var(--red);
   margin   : 0;
 }
 
 .hero__text {
   font-size: 25px;
   margin   : 0;
-  color    : var(--red);
+  color    : black;
 }
 
 .hero__cta {
@@ -183,7 +184,12 @@ footer a:hover,
 }
 
 .text-container {
-  width: 50%;
+
+  width          : 50%;
+  display        : flex;
+  flex-direction : column;
+  justify-content: center;
+  align-items    : center;
 }
 
 .text-container a {
@@ -193,10 +199,10 @@ footer a:hover,
 }
 
 .img-profile {
-  width           : 300px;
-  height          : 300px;
-  object-fit      : cover;
-  background-color: aqua;
+  width        : 300px;
+  height       : 300px;
+  border-radius: 50%;
+  object-fit   : cover;
 }
 
 /* Skills */
@@ -346,9 +352,9 @@ footer a {
   list-style: none;
   width     : 20px;
   height    : 20px;
-  background: rgba(124, 35, 0, 0.2);
+  background: #3c060c63;
   animation : animate 25s linear infinite;
-  bottom    : 200px;
+  bottom    : 50px;
 }
 
 .squares li:nth-child(1) {
