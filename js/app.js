@@ -26,7 +26,7 @@ window.addEventListener('resize', () => {
 
 // Valida la configuracion del lightbox dependiendo la pantalla
 const comprobarAncho = () => {
-  if (window.innerWidth <= 1000) {
+  if (window.innerWidth <= 900) {
     lightbox.option({
       'resizeDuration': 500,
       'wrapAround': true,
